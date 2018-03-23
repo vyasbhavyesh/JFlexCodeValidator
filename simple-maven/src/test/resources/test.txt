@@ -1,0 +1,9 @@
+int inta;
+int ina;
+int ia;
+int ant;
+int art;
+int abcd;
+int abc=0;
+int intA;
+int intA,intB,intC;
