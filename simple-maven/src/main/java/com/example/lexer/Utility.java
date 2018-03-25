@@ -1,8 +1,10 @@
+package com.example.lexer;
+
 /**
  * A small utility class.
  * TODO: use resource bundle
  */
-class Utility {
+public class Utility {
   
   private static final String errorMsg[] = {
     "Error: Unmatched end-of-comment punctuation.",

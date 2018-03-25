@@ -1,0 +1,89 @@
+line: 1 match: --int inta;--
+action [62] { //System.out.println(yytext());
+            return (new Yytoken(41,yytext(),yyline,yychar,yychar+yylength())); }
+Text   : int inta;
+index : 41
+line  : 0
+cBeg. : 0
+cEnd. : 9
+line: 1 match: --\u000D\u000A--
+action [56] {  }
+line: 2 match: --int ina;--
+action [66] { //System.out.println(yytext());
+           return (new Yytoken(42,yytext(),yyline,yychar,yychar+yylength())); }
+Text   : int ina;
+index : 42
+line  : 1
+cBeg. : 11
+cEnd. : 19
+line: 2 match: --\u000D\u000A--
+action [56] {  }
+line: 3 match: --int ia;--
+action [66] { //System.out.println(yytext());
+           return (new Yytoken(42,yytext(),yyline,yychar,yychar+yylength())); }
+Text   : int ia;
+index : 42
+line  : 2
+cBeg. : 21
+cEnd. : 28
+line: 3 match: --\u000D\u000A--
+action [56] {  }
+line: 4 match: --int ant;--
+action [66] { //System.out.println(yytext());
+           return (new Yytoken(42,yytext(),yyline,yychar,yychar+yylength())); }
+Text   : int ant;
+index : 42
+line  : 3
+cBeg. : 30
+cEnd. : 38
+line: 4 match: --\u000D\u000A--
+action [56] {  }
+line: 5 match: --int art;--
+action [66] { //System.out.println(yytext());
+           return (new Yytoken(42,yytext(),yyline,yychar,yychar+yylength())); }
+Text   : int art;
+index : 42
+line  : 4
+cBeg. : 40
+cEnd. : 48
+line: 5 match: --\u000D\u000A--
+action [56] {  }
+line: 6 match: --int abcd;--
+action [66] { //System.out.println(yytext());
+           return (new Yytoken(42,yytext(),yyline,yychar,yychar+yylength())); }
+Text   : int abcd;
+index : 42
+line  : 5
+cBeg. : 50
+cEnd. : 59
+line: 6 match: --\u000D\u000A--
+action [56] {  }
+line: 7 match: --int abc=0;--
+action [66] { //System.out.println(yytext());
+           return (new Yytoken(42,yytext(),yyline,yychar,yychar+yylength())); }
+Text   : int abc=0;
+index : 42
+line  : 6
+cBeg. : 61
+cEnd. : 71
+line: 7 match: --\u000D\u000A--
+action [56] {  }
+line: 8 match: --int intA;--
+action [58] { //System.out.println(yytext());
+        return (new Yytoken(43,yytext(),yyline,yychar,yychar+yylength())); }
+Text   : int intA;
+index : 43
+line  : 7
+cBeg. : 73
+cEnd. : 82
+line: 8 match: --\u000D\u000A--
+action [56] {  }
+line: 9 match: --int intA,intB,intC;--
+action [70] { //System.out.println(yytext());
+                             return (new Yytoken(40,yytext(),yyline,yychar,yychar+yylength())); }
+Text   : int intA,intB,intC;
+index : 40
+line  : 8
+cBeg. : 84
+cEnd. : 103
+null
