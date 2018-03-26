@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="Yylex">
+    <output-path>$PROJECT_DIR$/classes/artifacts/Yylex</output-path>
+    <root id="archive" name="Yylex.jar">
+      <element id="module-output" name="simple-maven" />
+    </root>
+  </artifact>
+</component>

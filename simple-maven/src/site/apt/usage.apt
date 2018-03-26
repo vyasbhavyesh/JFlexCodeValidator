@@ -45,7 +45,7 @@ Usage
 
 	The jflex-maven-plugin will read the grammar 
 	<<<src/main/jflex/simple.jflex>>>
-	and generate a Java scanner <<<Yylex.java>>>
+	and generate a Java scanner <<<com.jflex.lexer.Yylex.java>>>
 	in <<<target/generated-sources/flex>>>
 
 	This is defined by the following section

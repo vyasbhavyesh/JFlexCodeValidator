@@ -2,10 +2,13 @@ package com.example.lexer.controller;
 
 import com.example.lexer.model.LexerModel;
 import com.example.lexer.view.UserView;
+import com.jflex.lexer.Yylex;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileSystemView;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.PrintStream;
 
 public class UserInputController {
 
@@ -57,8 +60,30 @@ public class UserInputController {
             JOptionPane.showMessageDialog(null, "File name or action is empty.", "Warning", JOptionPane.ERROR_MESSAGE);
         }
         else{
-            JOptionPane.showMessageDialog(null, "Thank you", "Warning", JOptionPane.INFORMATION_MESSAGE);
-            System.exit(0);
+            String[] argv = new String[1];
+            argv[0] = lexerModel.getFileName();
+
+            // Create a stream to hold the output
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            PrintStream ps = new PrintStream(baos);
+            // IMPORTANT: Save the old System.out!
+            PrintStream old = System.out;
+            // Tell Java to use your special stream
+            System.setOut(ps);
+            // Print some output: goes to your special stream
+           // System.out.println("Foofoofoo!");
+            Yylex.main(argv);
+            // Put things back
+            System.out.flush();
+            System.setOut(old);
+            // Show what happened
+            //System.out.println("Here: " + baos.toString());
+
+            lexerModel.setConsoleData(baos.toString());
+            userView.getTextAreaConsole().setText(lexerModel.getConsoleData());
+
+            JOptionPane.showMessageDialog(null, "Thank you", "Well done", JOptionPane.INFORMATION_MESSAGE);
+
         }
     }
 }
